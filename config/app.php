@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Lima',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -149,6 +149,15 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Providers Externos
+         */
+        Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Jenssegers\Date\DateServiceProvider::class,
+
+        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
@@ -201,6 +210,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /* Providers externos */
+        'Form'      => 'Collective\Html\FormFacade',
+        'HTML'      => 'Collective\Html\HtmlFacade',
+        'Image'     => 'Intervention\Image\Facades\Image',
+        'Flash'     => 'Laracasts\Flash\Flash',
+        'Excel'     => 'Maatwebsite\Excel\Facades\Excel',
+        'Date'      => 'Jenssegers\Date\Date'
 
     ],
 
