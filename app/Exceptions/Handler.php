@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace Femip\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Femip\Http\Controllers\Auth;
 
-use App\User;
+use Femip\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Femip\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
