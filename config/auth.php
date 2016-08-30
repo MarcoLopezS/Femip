@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Femip\User::class,
+            'model' => Femip\Entities\User::class,
         ],
 
         // 'users' => [
