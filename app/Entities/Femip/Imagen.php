@@ -22,7 +22,7 @@ class Imagen extends BaseEntity{
 
     public function getImagenGaleriaAttribute()
     {
-        return "/upload/".$this->imagen_carpeta."400/".$this->imagen;
+        return "/upload/".$this->imagen_carpeta."300x300/".$this->imagen;
     }
 
     public function getImagenFinalAttribute()

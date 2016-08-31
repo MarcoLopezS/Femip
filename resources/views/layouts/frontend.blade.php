@@ -84,7 +84,7 @@
                                                 <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
                                                 <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
                                                 <li {!! (Request::is('galeria*') ? 'class="active"' : '') !!}><a href="/galerias">Galería de Fotos</a></li>
-                                                <li {!! (Request::is('enlace*') ? 'class="active"' : '') !!}><a href="/enlaces">Enlaces</a></li>
+                                                {{--<li {!! (Request::is('enlace*') ? 'class="active"' : '') !!}><a href="#">Enlaces</a></li>--}}
                                             </ul>
                                         </nav>
                                     </div>
@@ -115,7 +115,7 @@
                                     <li><a href="/noticias">Noticias</a></li>
                                     <li><a href="/eventos">Eventos</a></li>
                                     <li><a href="/galerias">Galería de Fotos</a></li>
-                                    <li><a href="/enlaces">Enlaces</a></li>
+                                    {{--<li><a href="#">Enlaces</a></li>--}}
                                 </ul>
                             </nav>
                         </div>

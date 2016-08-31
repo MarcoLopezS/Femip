@@ -32,29 +32,34 @@
 
     <div class="container">
 
+        <ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter" data-plugin-options='{"layoutMode": "masonry", "filter": "*"}' style="display: none;">
+            <li data-option-value="*" class="active"><a href="#">Show All</a></li>
+        </ul>
+
         <div class="row">
 
-            <div class="masonry lightbox" data-plugin-masonry data-plugin-options='{"itemSelector": ".masonry-item", "delegate": "a", "type": "image", "gallery": {"enabled": true}, "mainClass": "mfp-with-zoom", "zoom": {"enabled": true, "duration": 300}}'>
-                @foreach($row->imagenes as $foto)
-                    @php
-                        $imagen = $foto->imagen_galeria;
-                        $imagen_o = $foto->imagen_final;
-                    @endphp
-                    <div class="masonry-item col-md-3 col-sm-6 col-xs-12">
-                        <a href="{{ $imagen_o }}">
-                            <span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
-                                <span class="thumb-info-wrapper">
-                                    <img src="{{ $imagen }}" class="img-responsive img-row" alt="">
-                                    <span class="thumb-info-action">
-                                        <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+            <div class="sort-destination-loader sort-destination-loader-showing">
+                <ul class="portfolio-list sort-destination lightbox" data-sort-id="portfolio" data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}, "mainClass": "mfp-with-zoom", "zoom": {"enabled": true, "duration": 300}}'>
+                    @foreach($row->imagenes as $foto)
+                        @php
+                            $imagen = $foto->imagen_galeria;
+                            $imagen_o = $foto->imagen_final;
+                        @endphp
+                    <li class="col-md-3 col-sm-6 col-xs-12 isotope-item">
+                        <div class="portfolio-item">
+                            <a href="{{ $imagen_o }}">
+                                <span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="{{ $imagen }}" class="img-responsive img-row" alt="">
                                     </span>
                                 </span>
-                            </span>
-                        </a>
-                    </div>
-                @endforeach
-
+                            </a>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
+
         </div>
 
     </div>
@@ -68,7 +73,7 @@
         $(document).on("ready", function() {
             $("img.img-row").lazyload({
                 effect: "fadeIn",
-                threshold : 20
+                threshold : 200
             });
         });
     </script>
