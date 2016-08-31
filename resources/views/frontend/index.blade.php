@@ -110,12 +110,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive mb-lg" src="img/office/our-office-4.jpg" alt="Office">
+                    <img class="img-responsive mb-lg" src="/imagenes/oficina.jpg" alt="Office">
                 </div>
                 <div class="col-md-9">
                     <h2 class="mb-lg"><strong>Federación Mundial de Instituciones Peruanas</strong></h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat urna arcu. Mauris lobortis nulla ut aliquet interdum.</p>
-                    <p>Mauris lobortis nulla ut aliquet interdum. Donec commodo ac elit sed placerat. Mauris rhoncus est ac sodales gravida. In eros felis, elementum aliquam nisi vel, pellentesque faucibus nulla. Lorem ipsum dolor. <a class="btn-flat btn-xs" href="#">View More <i class="fa fa-arrow-right"></i></a></p>
+                    <p class="lead">El objetivo más importante de las convenciones de la FEMIP, son las conferencias, donde se tratan temas de vital importancia para nuestra comunidad peruana residente en el extranjero y por ende afecta a sus familiares que viven en el Perú.</p>
                 </div>
             </div>
         </div>
@@ -129,54 +128,29 @@
                 </div>
             </div>
             <div class="row mt-lg">
+
+                @foreach($noticias as $row)
+                    @php
+                        $row_titulo = $row->titulo;
+                        $row_url = $row->url;
+                        $row_imagen = $row->imagen_noticia_home;
+                        $row_descripcion = $row->descripcion;
+                        $row_fecha = $row->fecha;
+                    @endphp
                 <div class="col-md-3">
-                    <img class="img-responsive" src="img/blog/blog-vintage-1.jpg" alt="Blog">
+                    <img class="img-responsive" src="{{ $row_imagen }}" alt="{{ $row_titulo }}">
                     <div class="recent-posts mt-md mb-lg">
                         <article class="post">
-                            <h5><a class="text-dark" href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
+                            <h5><a class="text-dark" href="{{ $row_url }}">{{ $row_titulo }}</a></h5>
+                            <p>{{ $row_descripcion }}</p>
                             <div class="post-meta">
-                                <span><i class="fa fa-calendar"></i> January 10, 2016 </span>
+                                <span><i class="fa fa-calendar"></i>{{ $row_fecha }}</span>
                             </div>
                         </article>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="img/blog/blog-vintage-2.jpg" alt="Blog">
-                    <div class="recent-posts mt-md mb-lg">
-                        <article class="post">
-                            <h5><a class="text-dark" href="blog-post.html">Lorem consectetur adipiscing elit.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                            <div class="post-meta">
-                                <span><i class="fa fa-calendar"></i> January 10, 2016 </span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="img/blog/blog-vintage-3.jpg" alt="Blog">
-                    <div class="recent-posts mt-md mb-lg">
-                        <article class="post">
-                            <h5><a class="text-dark" href="blog-post.html">Lorem dolor sit amet, consectetur adipiscing elit.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                            <div class="post-meta">
-                                <span><i class="fa fa-calendar"></i> January 10, 2016 </span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="img/blog/blog-vintage-4.jpg" alt="Blog">
-                    <div class="recent-posts mt-md mb-lg">
-                        <article class="post">
-                            <h5><a class="text-dark" href="blog-post.html">Lorem ipsum dot, consectetur adipiscing elit.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                            <div class="post-meta">
-                                <span><i class="fa fa-calendar"></i> January 10, 2016 </span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>

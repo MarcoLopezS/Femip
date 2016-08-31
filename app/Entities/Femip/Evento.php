@@ -4,7 +4,7 @@ use Femip\Entities\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Femip\Entities\BaseEntity;
 
-class Noticia extends BaseEntity {
+class Evento extends BaseEntity {
 
     use SoftDeletes;
 
@@ -12,7 +12,7 @@ class Noticia extends BaseEntity {
 
 	protected $fillable = ['titulo','slug_url','descripcion','contenido','video','publicar','published_at','user_id'];
 
-    protected $table = "noticias";
+    protected $table = "eventos";
 
     /*
      * RELACIONES
@@ -32,7 +32,7 @@ class Noticia extends BaseEntity {
      */
     public function getUrlAttribute()
     {
-        return route('noticias.select', [$this->id, $this->slug_url]);
+        return route('eventos.select', [$this->id, $this->slug_url]);
     }
 
     public function getFechaAttribute()
@@ -50,22 +50,16 @@ class Noticia extends BaseEntity {
         return strtoupper(fechaMes($this->published_at));
     }
 
-    public function getImagenNoticiaHomeAttribute()
+    public function getImagenEventoListAttribute()
     {
         $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."300x300/".$imagen->imagen;
+        return "/upload/".$imagen->imagen_carpeta."1170x600/".$imagen->imagen;
     }
 
-    public function getImagenNoticiaListAttribute()
+    public function getImagenEventoSelectAttribute()
     {
         $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."460x250/".$imagen->imagen;
-    }
-
-    public function getImagenNoticiaSelectAttribute()
-    {
-        $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."900x600/".$imagen->imagen;
+        return "/upload/".$imagen->imagen_carpeta."400x400/".$imagen->imagen;
     }
 
 }

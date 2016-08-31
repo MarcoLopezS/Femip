@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('contenido_admin_title')
-	Noticias
+	Galerías de Fotos
 @stop
 
 @section('contenido_admin')
@@ -22,7 +22,7 @@
                     <div class="table-toolbar">
 
                         <div class="btn-group">
-                            <a href="{{ route('admin.noticias.create') }}" class="btn green">
+                            <a href="{{ route('admin.galerias.create') }}" class="btn green">
                                 Agregar registro
                                 <i class="fa fa-plus"></i>
                             </a>
@@ -42,12 +42,12 @@
                         
                     </div>
 
-                    {!! Form::model(Request::all(), ['route' => 'admin.noticias.index', 'method' => 'GET']) !!}
+                    {!! Form::model(Request::all(), ['route' => 'admin.galerias.index', 'method' => 'GET']) !!}
 
                         <table class="table table-striped table-bordered" id="table2">
                             <thead>
                                 <tr>
-                                    <th>Noticias</th>
+                                    <th>Titulo</th>
                                     <th>Publicado</th>
                                     <th></th>
                                 </tr>
@@ -63,7 +63,7 @@
                                     <td class="text-center col-md-2">
                                         {!! Form::button('<span class="glyphicon glyphicon-search" aria-hidden="true"></span>', ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
 
-                                        <a href="{!! route('admin.noticias.index') !!}" class="btn btn-danger">
+                                        <a href="{!! route('admin.galerias.index') !!}" class="btn btn-danger">
                                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </a>
                                     </td>
@@ -96,9 +96,9 @@
                                             Acciones <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ route('admin.noticias.edit', $item->id) }}">Editar</a></li>
+                                            <li><a href="{{ route('admin.galerias.edit', $item->id) }}">Editar</a></li>
                                             <li><a href="#delete" class="btn-delete">Eliminar</a></li>
-                                            <li><a href="{{ route('admin.noticias.img.list', $item->id) }}">Imagenes</a></li>
+                                            <li><a href="{{ route('admin.galerias.img.list', $item->id) }}">Imagenes</a></li>
                                         </ul>
                                     </div>
                                 </td>
@@ -127,7 +127,7 @@
 		</div>
 	</div>
 
-{!! Form::open(['route' => ['admin.noticias.destroy', ':REGISTER'], 'method' => 'DELETE', 'id' => 'FormDeleteRow']) !!}
+{!! Form::open(['route' => ['admin.galerias.destroy', ':REGISTER'], 'method' => 'DELETE', 'id' => 'FormDeleteRow']) !!}
 {!! Form::close() !!}
 
 <div class="modal-view" id="delete" title="Eliminar registro">

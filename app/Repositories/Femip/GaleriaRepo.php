@@ -3,17 +3,17 @@
 use Illuminate\Http\Request;
 use Femip\Repositories\BaseRepo;
 
-use Femip\Entities\Femip\Noticia;
+use Femip\Entities\Femip\Galeria;
 
-class NoticiaRepo extends BaseRepo{
+class GaleriaRepo extends BaseRepo{
 
     public function getModel()
     {
-        return new Noticia();
+        return new Galeria();
     }
 
     //PAGINAS NOTICIAS EN HOME
-    public function listaNoticias()
+    public function listaGalerias()
     {
         return $this->getModel()
                     ->where('published_at','<=',fechaActual())

@@ -15,5 +15,19 @@ class Imagen extends BaseEntity{
     {
         return $this->morphTo();
     }
+    
+    /*
+     * GETTES
+     */
+
+    public function getImagenGaleriaAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta."400/".$this->imagen;
+    }
+
+    public function getImagenFinalAttribute()
+    {
+        return "/upload/".$this->imagen_carpeta."".$this->imagen;
+    }
 
 }

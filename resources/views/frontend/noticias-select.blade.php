@@ -19,6 +19,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li class="active">Noticia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <h1>{{ $row_titulo }}</h1>
                 </div>
             </div>

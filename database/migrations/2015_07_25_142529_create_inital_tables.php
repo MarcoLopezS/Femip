@@ -57,16 +57,52 @@ class CreateInitalTables extends Migration {
             
             $table->string('titulo');
             $table->string('slug_url');
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();;
             $table->text('contenido');
-            $table->string('video');
-            $table->string('tags');
+            $table->string('video')->nullable();;
 
-            $table->boolean('publicar')->default(false);
+            $table->boolean('publicar')->default(true);
 
             $table->integer('user_id')->nullable()->default(NULL);
 
-            $table->timestamp('published_at');
+            $table->timestamp('published_at')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('eventos', function(Blueprint $table)
+        {
+            $table->increments('id');
+
+            $table->string('titulo');
+            $table->string('slug_url');
+            $table->string('descripcion');
+            $table->text('contenido');
+
+            $table->string('lugar');
+            $table->date('fecha_inicio');
+            $table->date('fecha_fin');
+
+            $table->boolean('publicar')->default(false);
+            $table->integer('user_id')->nullable()->default(NULL);
+
+            $table->timestamp('published_at')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('galerias', function(Blueprint $table)
+        {
+            $table->increments('id');
+
+            $table->string('titulo');
+            $table->string('slug_url');
+            $table->string('descripcion');
+
+            $table->boolean('publicar')->default(false);
+            $table->integer('user_id')->nullable()->default(NULL);
+
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -77,9 +113,9 @@ class CreateInitalTables extends Migration {
 
             $table->morphs('imagenable');
 
-            $table->string('titulo');
-            $table->string('imagen');
-            $table->string('imagen_carpeta');
+            $table->string('titulo')->nullable();;
+            $table->string('imagen')->nullable();;
+            $table->string('imagen_carpeta')->nullable();;
 
             $table->integer('orden');
 
@@ -99,6 +135,8 @@ class CreateInitalTables extends Migration {
 	public function down()
 	{
         Schema::drop('imagenes');
+        Schema::drop('galerias');
+        Schema::drop('eventos');
         Schema::drop('noticias');
         Schema::drop('user_profiles');
         Schema::drop('users');

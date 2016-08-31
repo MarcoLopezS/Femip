@@ -3,23 +3,23 @@
 use Illuminate\Http\Request;
 use Femip\Repositories\BaseRepo;
 
-use Femip\Entities\Femip\Noticia;
+use Femip\Entities\Femip\Evento;
 
-class NoticiaRepo extends BaseRepo{
+class EventoRepo extends BaseRepo{
 
     public function getModel()
     {
-        return new Noticia();
+        return new Evento();
     }
 
     //PAGINAS NOTICIAS EN HOME
-    public function listaNoticias()
+    public function listaEventos()
     {
         return $this->getModel()
                     ->where('published_at','<=',fechaActual())
                     ->where('publicar', 1)
                     ->orderBy('published_at', 'desc')
-                    ->paginate(4);
+                    ->paginate(3);
     }
 
     //BUSQUEDA DE REGISTROS
