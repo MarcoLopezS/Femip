@@ -155,6 +155,35 @@
         </div>
     </section>
 
+    <div class="modal fade" id="modal-popup" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    <h4 class="modal-title" id="defaultModalLabel">Estimado amigo:</h4>
+                </div>
+                <div class="modal-body">
+                    <p>En nombre de la <strong>Federaci&oacute;n Mundial de Instituciones Peruanas &ndash; FEMIP</strong>, entidad que me honro en presidir, los invitamos cordialmente a nuestra pr&oacute;xima <strong>VII Convenci&oacute;n</strong>, que se realizar&aacute; los d&iacute;as 4, 5 y 6 de noviembre 2016 en las instalaciones del Hotel Resort Costa Vista en &nbsp;Okinawa - Jap&oacute;n.</p>
+
+                    <p>Los temas que se tratar&aacute;n en las Conferencias ser&aacute;n: el Proyecto de Ley sobre la Creaci&oacute;n del Distrito Electoral en el Extranjero, el Medio Ambiente y otros temas de inter&eacute;s para la comunidad peruana.</p>
+
+                    <p>Les reitero est&aacute; cordial invitaci&oacute;n para que participen en nuestro evento, vuestra presencia es de suma importancia.</p>
+
+                    <p>Acompa&ntilde;amos y no pierdan esta oportunidad de tambi&eacute;n hacer turismo en el pa&iacute;s del Sol naciente.&nbsp; Tenemos un programa tur&iacute;stico y de atracciones muy interesante para complementarlos con la Convenci&oacute;n.</p>
+
+                    <p>Pr&oacute;ximamente enviaremos la ficha de inscripci&oacute;n y los datos del hotel.</p>
+
+                    <p>Julio A. Salazar<br />
+                        Presidente</p>
+
+                    <h2 style="text-align:center"><strong>¡¡¡VIVA EL PERU!!!</strong></h2>
+                    <h2 style="text-align:center"><strong>¡¡¡VIVA EL QUINTO SUYO!!!</strong></h2>
+                    <h2 style="text-align:center"><strong>¡¡¡NOS VEMOS EN OKINAWA!!!</strong></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
 
 
@@ -217,6 +246,16 @@
                 });
             }
         });	/*ready*/
+    </script>
+
+    <script>
+        $('#modal-popup').on('shown.bs.modal', function () {
+            $("#txtname").focus();
+        });
+
+        $('#modal-popup').modal({
+            show: true
+        });
     </script>
 
 @stop
