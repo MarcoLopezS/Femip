@@ -1,5 +1,6 @@
 <?php namespace Femip\Http\Controllers;
 
+use Femip\Repositories\Admin\SliderRepo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
@@ -14,27 +15,33 @@ class FrontendController extends Controller
     protected $noticiaRepo;
     protected $eventoRepo;
     protected $galeriaRepo;
+    protected $sliderRepo;
 
     /**
      * FrontendController constructor.
      * @param EventoRepo $eventoRepo
      * @param GaleriaRepo $galeriaRepo
      * @param NoticiaRepo $noticiaRepo
+     * @param SliderRepo $sliderRepo
      */
     public function __construct(EventoRepo $eventoRepo,
                                 GaleriaRepo $galeriaRepo,
-                                NoticiaRepo $noticiaRepo)
+                                NoticiaRepo $noticiaRepo,
+                                SliderRepo $sliderRepo)
     {
         $this->eventoRepo = $eventoRepo;
         $this->galeriaRepo = $galeriaRepo;
         $this->noticiaRepo = $noticiaRepo;
+        $this->sliderRepo = $sliderRepo;
     }
 
     public function index()
     {
         $noticias = $this->noticiaRepo->listaNoticias();
 
-        return view('frontend.index', compact('noticias'));
+        $slider = $this->sliderRepo->where('id',1)->first();
+
+        return view('frontend.index', compact('noticias', 'slider'));
     }
 
     public function nosotros()
