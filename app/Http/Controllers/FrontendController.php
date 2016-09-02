@@ -49,6 +49,11 @@ class FrontendController extends Controller
         return view('frontend.nosotros');
     }
 
+    public function nosotrosMensaje()
+    {
+        return view('frontend.nosotros-mensaje');
+    }
+
     public function noticias()
     {
         $rows = $this->noticiaRepo->listaNoticias();

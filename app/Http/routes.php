@@ -2,6 +2,7 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'FrontendController@index']);
 Route::get('nosotros', ['as' => 'nosotros', 'uses' => 'FrontendController@nosotros']);
+Route::get('mensaje-presidente', ['as' => 'nosotros.mensaje', 'uses' => 'FrontendController@nosotrosMensaje']);
 Route::get('noticias', ['as' => 'noticias', 'uses' => 'FrontendController@noticias']);
 Route::get('noticia/{id}-{url}', ['as' => 'noticias.select', 'uses' => 'FrontendController@noticiasSelect']);
 Route::get('eventos', ['as' => 'eventos', 'uses' => 'FrontendController@eventos']);
