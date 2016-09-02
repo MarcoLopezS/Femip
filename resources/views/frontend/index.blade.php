@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive mb-lg" src="/imagenes/oficina.jpg" alt="Office">
+                    <img class="img-responsive mb-lg" src="/imagenes/logo.png" alt="Office">
                 </div>
                 <div class="col-md-9">
                     <h2 class="mb-lg"><strong>Federación Mundial de Instituciones Peruanas</strong></h2>
@@ -64,7 +64,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
-                    <h4 class="modal-title" id="defaultModalLabel">Estimado amigo:</h4>
+                    <h4 class="modal-title" id="defaultModalLabel">
+                        <img alt="Femip" height="60" src="/imagenes/logo.png">
+                    </h4>
                 </div>
                 <div class="modal-body">
                     <p>En nombre de la <strong>Federaci&oacute;n Mundial de Instituciones Peruanas &ndash; FEMIP</strong>, entidad que me honro en presidir, los invitamos cordialmente a nuestra pr&oacute;xima <strong>VII Convenci&oacute;n</strong>, que se realizar&aacute; los d&iacute;as 4, 5 y 6 de noviembre 2016 en las instalaciones del Hotel Resort Costa Vista en &nbsp;Okinawa - Jap&oacute;n.</p>
@@ -80,8 +82,8 @@
                     <p>Julio A. Salazar<br />
                         Presidente</p>
 
-                    <h2 style="text-align:center"><strong>¡¡¡VIVA EL PERU!!!</strong></h2>
-                    <h2 style="text-align:center"><strong>¡¡¡VIVA EL QUINTO SUYO!!!</strong></h2>
+                    <h3 style="text-align:center"><strong>¡¡¡VIVA EL PERU!!!</strong></h3>
+                    <h3 style="text-align:center"><strong>¡¡¡VIVA EL QUINTO SUYO!!!</strong></h3>
                     <h2 style="text-align:center"><strong>¡¡¡NOS VEMOS EN OKINAWA!!!</strong></h2>
                 </div>
             </div>
