@@ -80,7 +80,13 @@
                                         <nav>
                                             <ul class="nav nav-pills" id="mainNav">
                                                 <li {!! (Request::is('/') ? 'class="active"' : '') !!}><a href="/">Inicio</a></li>
-                                                <li {!! (Request::is('nosotros*') ? 'class="active"' : '') !!}><a href="/nosotros">¿Quiénes somos?</a></li>
+                                                <li {!! (Request::is('nosotros*') ? 'class="dropdown active"' : 'class="dropdown"') !!}>
+                                                    <a class="dropdown-toggle" href="#">Nosotros</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="/nosotros">¿Quienes somos?</a></li>
+                                                        <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
+                                                    </ul>
+                                                </li>
                                                 <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
                                                 <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
                                                 <li {!! (Request::is('galeria*') ? 'class="active"' : '') !!}><a href="/galerias">Galería de Fotos</a></li>
