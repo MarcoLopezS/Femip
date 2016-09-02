@@ -38,6 +38,7 @@
                                         <img src="{{ $row_imagen }}" class="img-responsive" alt="{{ $row_titulo }}">
                                         <span class="thumb-info-title">
                                             <span class="thumb-info-inner">{{ $row_titulo }}</span>
+                                            <span class="thumb-info-inner fecha">{{ $row_fecha }}</span>
                                         </span>
                                         <span class="thumb-info-action">
                                             <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>

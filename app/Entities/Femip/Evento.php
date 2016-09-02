@@ -10,7 +10,7 @@ class Evento extends BaseEntity {
 
     protected $dates = ['published_at','deleted_at'];
 
-	protected $fillable = ['titulo','slug_url','descripcion','contenido','video','publicar','published_at','user_id'];
+	protected $fillable = ['titulo','slug_url','descripcion','contenido','lugar','fecha','publicar','published_at','user_id'];
 
     protected $table = "eventos";
 
@@ -35,9 +35,9 @@ class Evento extends BaseEntity {
         return route('eventos.select', [$this->id, $this->slug_url]);
     }
 
-    public function getFechaAttribute()
+    public function getFechaEventoAttribute()
     {
-        return fechaTexto($this->published_at);
+        return $this->fecha;
     }
 
     public function getFechaDiaAttribute()

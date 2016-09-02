@@ -80,8 +80,7 @@ class CreateInitalTables extends Migration {
             $table->text('contenido');
 
             $table->string('lugar');
-            $table->date('fecha_inicio');
-            $table->date('fecha_fin');
+            $table->string('fecha');
 
             $table->boolean('publicar')->default(false);
             $table->integer('user_id')->nullable()->default(NULL);

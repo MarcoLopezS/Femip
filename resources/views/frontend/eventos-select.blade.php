@@ -38,10 +38,7 @@
             </div>
 
             <div class="col-md-8">
-
-                <h5 class="mt-sm">Descripción</h5>
                 {!! $row_contenido !!}
-
             </div>
         </div>
 
