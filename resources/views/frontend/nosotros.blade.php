@@ -28,6 +28,8 @@
                 <div class="featured-box featured-box-primary">
                     <div class="box-content">
                         <img src="/imagenes/julio-salazar.jpg" alt="Julio Salazar" title="Julio Salazar">
+                        <h4>Julio A. Salazar</h4>
+                        <h5>Presidente</h5>
                     </div>
                 </div>
             </div>
@@ -50,42 +52,84 @@
 
                 <ul class="history">
                     <li class="appear-animation" data-appear-animation="fadeInUp">
-                        <div class="thumb">
-                            <img src="/imagenes/logo-145.jpg" alt="" />
-                        </div>
                         <div class="featured-box">
                             <div class="box-content">
                                 <h4 class="heading-primary"><strong>2016</strong></h4>
-                                <p>Junta Directiva</p>
-                                <p><i class="fa fa-caret-right"></i> PRESIDENTE: SR. JULIO A. SALAZAR</p>
-                                <p><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA: SRA. MONIQUE PINEDA</p>
-                                <p><i class="fa fa-caret-right"></i> TESORERO GENERAL: ING. SILVIO ALVA</p>
-                                <p><i class="fa fa-caret-right"></i> REPRESENTANTES EN JAP&Oacute;N:</p>
-                                <p style="margin-left: 120px;">NOBUKO KOMINE</p>
-                                <p style="margin-left: 120px;">CARLOS GALARZZA</p>
-                                <p style="margin-left: 120px;">JAVIER SAKATA</p>
-                                <p style="margin-left: 120px;">HARUE NAKAMINE</p>
-                                <p style="margin-left: 120px;">JORGE ACHING</p>
-                                <p><i class="fa fa-caret-right"></i> REPRESENTANTE EN EUROPA: ROSARIO ZANABRIA</p>
-                                <p><i class="fa fa-caret-right"></i> REPRESENTANTE EN VENEZUELA: ELSA MENDOZA DE G&Oacute;MEZ</p>
+                                <p>JUNTA DIRECTIVA</p>
+                                <table border="0" cellpadding="5" cellspacing="1" style="width:500px">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> PRESIDENTE:</strong></td>
+                                            <td>JULIO A. SALAZAR</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</strong></td>
+                                            <td>MONIQUE PINEDA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> TESORERO GENERAL:</strong></td>
+                                            <td>SILVIO ALVA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTES EN JAP&Oacute;N:</strong></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-caret-right"></i> DIRECTOR GENERAL:</td>
+                                            <td>CARLOS GALARZA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</td>
+                                            <td>NOBUKO KOMINE</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTE EN EUROPA:</strong></td>
+                                            <td>ROSARIO ZANABRIA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTE EN VENEZUELA:</strong></td>
+                                            <td>ELSA MENDOZA DE G&Oacute;MEZ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </li>
                     <li class="appear-animation" data-appear-animation="fadeInUp">
-                        <div class="thumb">
-                            <img src="/imagenes/logo-145.jpg" alt="" />
-                        </div>
                         <div class="featured-box">
                             <div class="box-content">
                                 <h4 class="heading-primary"><strong>2000</strong></h4>
                                 <p>El d&iacute;a 24 de febrero del 2000, fecha en que se firm&oacute; el Acta de Fundaci&oacute;n de la Federaci&oacute;n Mundial de Instituciones Peruanas &ndash; FEMIP, se eligi&oacute; por unanimidad la Junta Directiva, quedando constituida como sigue:</p>
 
-                                <p><i class="fa fa-caret-right"></i> PRESIDENTE: SR. JULIO A. SALAZAR</p>
-                                <p><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA: SRA. MONIQUE PINEDA</p>
-                                <p><i class="fa fa-caret-right"></i> SECRETARIO GENERAL: SR. WILFREDO MARTINEZ</p>
-                                <p><i class="fa fa-caret-right"></i> TESORERO GENERAL: ING. SILVIO ALVA</p>
-                                <p><i class="fa fa-caret-right"></i> SECRETARIO DE RELACIONES PUBLICAS: SRA. BETTY GOMEZ</p>
-                                <p><i class="fa fa-caret-right"></i> SECRETARIO DE COORDINACION: SR. CARLOS GALARZZA</p>
+                                <table border="0" cellpadding="5" cellspacing="1" style="width:500px">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> PRESIDENTE:</strong></td>
+                                            <td>JULIO A. SALAZAR</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</strong></td>
+                                            <td>MONIQUE PINEDA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO GENERAL:</strong></td>
+                                            <td>WILFREDO MARTINEZ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> TESORERO GENERAL:</strong></td>
+                                            <td>SILVIO ALVA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO DE RELACIONES PUBLICAS:</strong></td>
+                                            <td>BETTY GOMEZ</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO DE COORDINACION:</strong></td>
+                                            <td>CARLOS GALARZZA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
                             </div>
                         </div>
