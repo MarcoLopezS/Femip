@@ -53,13 +53,13 @@ class Evento extends BaseEntity {
     public function getImagenEventoListAttribute()
     {
         $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."1170x600/".$imagen->imagen;
+        return "/upload/".$imagen->imagen_carpeta."600x800/".$imagen->imagen;
     }
 
     public function getImagenEventoSelectAttribute()
     {
         $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."400x400/".$imagen->imagen;
+        return "/upload/".$imagen->imagen_carpeta."600x800/".$imagen->imagen;
     }
 
 }

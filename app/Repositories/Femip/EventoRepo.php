@@ -19,7 +19,7 @@ class EventoRepo extends BaseRepo{
                     ->where('published_at','<=',fechaActual())
                     ->where('publicar', 1)
                     ->orderBy('published_at', 'desc')
-                    ->paginate(3);
+                    ->paginate(6);
     }
 
     //BUSQUEDA DE REGISTROS

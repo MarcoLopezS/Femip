@@ -30,7 +30,7 @@
                             $row_descripcion = $row->descripcion;
                             $row_fecha = $row->fecha;
                         @endphp
-                    <li class="col-md-12">
+                    <li class="col-md-4">
                         <div class="portfolio-item">
                             <a href="{{ $row_url }}">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom thumb-info-hide-wrapper-bg">
@@ -38,7 +38,7 @@
                                         <img src="{{ $row_imagen }}" class="img-responsive" alt="{{ $row_titulo }}">
                                         <span class="thumb-info-title">
                                             <span class="thumb-info-inner">{{ $row_titulo }}</span>
-                                            <span class="thumb-info-inner fecha">{{ $row_fecha }}</span>
+                                            <span class="thumb-info-type">{{ $row_fecha }}</span>
                                         </span>
                                         <span class="thumb-info-action">
                                             <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
