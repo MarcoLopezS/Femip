@@ -226,6 +226,54 @@ class EventosController extends Controller {
         ]);
     }
 
+    public function photosEdit($post, $id)
+    {
+        $posts = $this->eventoRepo->findOrFail($post);
+        $photo = $this->imagenRepo->findOrFail($id);
+
+        return view('admin.eventos-imagenes.edit', compact('posts', 'photo'));
+    }
+
+    public function photosUpdate($post, $id, Request $request)
+    {
+        $postPhoto = $this->imagenRepo->findOrFail($id);
+
+        $ruleImg = [
+            'imagen' => 'mimes:jpg,jpeg,png'
+        ];
+
+        //VALIDACION DE DATOS
+        $this->validate($request, $ruleImg);
+
+        //VARIABLES
+        $titulo = $request->input('titulo');
+
+        //VERIFICAR SI SUBIO IMAGEN
+        if($request->hasFile('imagen'))
+        {
+            $this->imagenRepo->CrearCarpeta();
+            $ruta = "upload/".$this->imagenRepo->FechaCarpeta();
+            $archivo = $request->file('imagen');
+            $imagen = $this->imagenRepo->FileMove($archivo, $ruta);
+            $imagen_carpeta = $this->imagenRepo->FechaCarpeta();
+        }else{
+            $imagen = $request->input('imagen_actual');
+            $imagen_carpeta = $request->input('imagen_actual_carpeta');
+        }
+
+        //GUARDAR DATOS
+        $postPhoto->titulo = $titulo;
+        $postPhoto->imagen = $imagen;
+        $postPhoto->imagen_carpeta = $imagen_carpeta;
+        $this->imagenRepo->update($postPhoto, $request->all());
+
+        //MENSAJE
+        flash()->success('El registro se actualizó satisfactoriamente.');
+
+        //REDIRECCIONAR A PAGINA PARA VER DATOS
+        return redirect()->route('admin.eventos.img.list', $post);
+    }
+
     public function photosDelete($post, $id, Request $request)
     {
         $photo = $this->imagenRepo->findOrFail($id);

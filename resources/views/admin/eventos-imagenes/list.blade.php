@@ -57,6 +57,7 @@
 
                             @foreach($photos as $item)
                             {{-- */
+                            $url_editar = route('admin.eventos.img.edit', [$posts->id, $item->id]);
                             $imagen = "/upload/".$item->imagen_carpeta.$item->imagen;
                             $imagenThumb = "/upload/".$item->imagen_carpeta."100x100/".$item->imagen;
                             /* --}}
@@ -68,6 +69,10 @@
                                 <img height="100" width="100" src="{{ $imagenThumb }}" class="gallery-style" alt="Image">
 
                                 <div class="slider-options">
+                                    <a href="{{ $url_editar }}" title="Editar">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+
                                     <a class="photos-move handle" title="Mover">
                                         <span class="glyphicon glyphicon-move"></span>
                                     </a>

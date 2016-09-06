@@ -30,3 +30,10 @@ function fechaMes($datetime)
     $fecha = $fecha->format('M');
     return $fecha;
 }
+
+function fechaAnio($datetime)
+{
+    $fecha = Date::create($datetime->year, $datetime->month, $datetime->day, $datetime->hour, $datetime->minute, $datetime->second);
+    $fecha = $fecha->format('Y');
+    return $fecha;
+}

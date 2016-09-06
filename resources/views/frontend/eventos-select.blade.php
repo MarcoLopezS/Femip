@@ -4,6 +4,7 @@
     $row_titulo = $row->titulo;
     $row_url = $row->url;
     $row_imagen = $row->imagen_evento_select;
+    $row_imagen_titulo = $row->imagen_evento_select_titulo;
     $row_descripcion = $row->descripcion;
     $row_contenido = $row->contenido;
 @endphp
@@ -33,8 +34,9 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 center">
                 <img alt="{{ $row_titulo }}" class="img-responsive" src="{{ $row_imagen }}">
+                <h5>{{ $row_imagen_titulo }}</h5>
             </div>
 
             <div class="col-md-8">
