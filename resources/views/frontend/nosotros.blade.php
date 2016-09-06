@@ -27,9 +27,7 @@
             <div class="col-md-4">
                 <div class="featured-box featured-box-primary">
                     <div class="box-content">
-                        <img src="/imagenes/julio-salazar.jpg" alt="Julio Salazar" title="Julio Salazar">
-                        <h4>Julio A. Salazar</h4>
-                        <h5>Presidente</h5>
+                        <img src="/imagenes/logo-180.png" alt="FEMIP" title="FEMIP">
                     </div>
                 </div>
             </div>
@@ -55,41 +53,56 @@
                         <div class="featured-box">
                             <div class="box-content">
                                 <h4 class="heading-primary"><strong>2016</strong></h4>
-                                <p>JUNTA DIRECTIVA</p>
                                 <table border="0" cellpadding="5" cellspacing="1" style="width:500px">
                                     <tbody>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> PRESIDENTE:</strong></td>
-                                            <td>JULIO A. SALAZAR</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</strong></td>
-                                            <td>MONIQUE PINEDA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> TESORERO GENERAL:</strong></td>
-                                            <td>SILVIO ALVA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTES EN JAP&Oacute;N:</strong></td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-caret-right"></i> DIRECTOR GENERAL:</td>
-                                            <td>CARLOS GALARZA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</td>
-                                            <td>NOBUKO KOMINE</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTE EN EUROPA:</strong></td>
-                                            <td>ROSARIO ZANABRIA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> REPRESENTANTE EN VENEZUELA:</strong></td>
-                                            <td>ELSA MENDOZA DE G&Oacute;MEZ</td>
-                                        </tr>
+                                    <tr>
+                                        <td><strong>JUNTA DIRECTIVA</strong></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRESIDENTE</td>
+                                        <td>: JULIO A. SALAZAR</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIRECTORA EJECUTIVA</td>
+                                        <td>: MONIQUE PINEDA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TESORERO GENERAL</td>
+                                        <td>: SILVIO ALVA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>REPRESENTANTES EN JAP&Oacute;N</strong></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIRECTOR GENERAL</td>
+                                        <td>: CARLOS GALARZZA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DIRECTORA EJECUTIVA </td>
+                                        <td>: NOBUKO KOMINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>REPRESENTANTE EN EUROPA</strong></td>
+                                        <td>: ROSARIO ZANABRIA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>REPRESENTANTE EN VENEZUELA</strong></td>
+                                        <td>: ELSA MENDOZA DE G&Oacute;MEZ</td>
+                                    </tr>
                                     </tbody>
                                 </table>
 
@@ -104,30 +117,30 @@
 
                                 <table border="0" cellpadding="5" cellspacing="1" style="width:500px">
                                     <tbody>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> PRESIDENTE:</strong></td>
-                                            <td>JULIO A. SALAZAR</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> DIRECTORA EJECUTIVA:</strong></td>
-                                            <td>MONIQUE PINEDA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO GENERAL:</strong></td>
-                                            <td>WILFREDO MARTINEZ</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> TESORERO GENERAL:</strong></td>
-                                            <td>SILVIO ALVA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO DE RELACIONES PUBLICAS:</strong></td>
-                                            <td>BETTY GOMEZ</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong><i class="fa fa-caret-right"></i> SECRETARIO DE COORDINACION:</strong></td>
-                                            <td>CARLOS GALARZZA</td>
-                                        </tr>
+                                    <tr>
+                                        <td><strong>PRESIDENTE</strong></td>
+                                        <td>: JULIO A. SALAZAR</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DIRECTORA EJECUTIVA</strong></td>
+                                        <td>: MONIQUE PINEDA</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SECRETARIO GENERAL</strong></td>
+                                        <td>: WILFREDO MARTINEZ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TESORERO GENERAL</strong></td>
+                                        <td>: SILVIO ALVA</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SECRETARIA DE RELACIONES PUBLICAS</strong></td>
+                                        <td>: ELSA MENDOZA DE G&Oacute;MEZ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SECRETARIO DE COORDINACION</strong></td>
+                                        <td>: CARLOS GALARZZA</td>
+                                    </tr>
                                     </tbody>
                                 </table>
 
