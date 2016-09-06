@@ -56,47 +56,42 @@
 <body>
 
     <div class="body">
-        <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+        <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 140, "stickySetTop": "-140px"}'>
             <div class="header-body">
                 <div class="header-container container">
                     <div class="header-row">
-                        <div class="header-column">
+                        <div class="header-column header-column-center">
                             <div class="header-logo">
                                 <a href="/">
                                     <img alt="Femip" width="235" height="80" data-sticky-width="162" data-sticky-height="55" data-sticky-top="38" src="/imagenes/logo.png">
                                 </a>
                             </div>
                         </div>
-                        <div class="header-column">
-                            <div class="header-row">
-                                <div class="header-nav header-nav-stripe">
-                                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-                                        <i class="fa fa-bars"></i>
-                                    </button>
-                                    <ul class="header-social-icons social-icons hidden-xs">
-                                        <li class="social-icons-facebook"><a href="https://www.facebook.com/femipperu/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    </div>
+                </div>
+                <div class="header-container container header-nav header-nav-center">
+                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                        <nav>
+                            <ul class="nav nav-pills" id="mainNav">
+                                <li {!! (Request::is('/') ? 'class="active"' : '') !!}><a href="/">Inicio</a></li>
+                                <li {!! (Request::is('nosotros*') ? 'class="dropdown active"' : 'class="dropdown"') !!}>
+                                    <a class="dropdown-toggle" href="#">Nosotros</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/nosotros">¿Quiénes somos?</a></li>
+                                        <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
                                     </ul>
-                                    <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-                                        <nav>
-                                            <ul class="nav nav-pills" id="mainNav">
-                                                <li {!! (Request::is('/') ? 'class="active"' : '') !!}><a href="/">Inicio</a></li>
-                                                <li {!! (Request::is('nosotros*') ? 'class="dropdown active"' : 'class="dropdown"') !!}>
-                                                    <a class="dropdown-toggle" href="#">Nosotros</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="/nosotros">¿Quienes somos?</a></li>
-                                                        <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
-                                                <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
-                                                <li {!! (Request::is('galeria*') ? 'class="active"' : '') !!}><a href="/galerias">Galería de Fotos</a></li>
-                                                {{--<li {!! (Request::is('enlace*') ? 'class="active"' : '') !!}><a href="#">Enlaces</a></li>--}}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                </li>
+                                {{--<li {!! (Request::is('inscripcion*') ? 'class="active"' : '') !!}><a href="/inscripcion">Ficha de Inscripción</a></li>--}}
+                                <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
+                                <li {!! (Request::is('nota*') ? 'class="active"' : '') !!}><a href="/nota-prensa">Notas de Prensa</a></li>
+                                <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
+                                <li {!! (Request::is('galeria*') ? 'class="active"' : '') !!}><a href="/galerias">Galería de Fotos</a></li>
+                                <li {!! (Request::is('enlace*') ? 'class="active"' : '') !!}><a href="/enlaces">Enlaces</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -118,8 +113,8 @@
                                 <ul>
                                     <li><a href="/">Inicio</a></li>
                                     <li><a href="/nosotros">¿Quiénes somos?</a></li>
-                                    <li><a href="/noticias">Noticias</a></li>
                                     <li><a href="/eventos">Eventos</a></li>
+                                    <li><a href="/noticias">Noticias</a></li>
                                     <li><a href="/galerias">Galería de Fotos</a></li>
                                     {{--<li><a href="#">Enlaces</a></li>--}}
                                 </ul>
