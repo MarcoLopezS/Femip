@@ -130,26 +130,6 @@
 					</a>
 				</li>
 
-				<li {!! (Request::is('admin/not*') ? 'class="active open"' : '') !!}>
-					<a href="javascript:;">
-						<i class="icon-grid"></i>
-						<span class="title">Noticias</span>
-						{!! (Request::is('admin/not*') ? '<span class="arrow open"></span>' : '<span class="arrow"></span>') !!}
-					</a>
-					<ul class="sub-menu">
-						<li {!! (Request::is('admin/noticias') ? 'class="active"' : '') !!}>
-							<a href="{{ route('admin.noticias.index') }}">
-							<i class="icon-list"></i>
-							Todos las noticias</a>
-						</li>
-						<li {!! (Request::is('admin/noticias/create') ? 'class="active"' : '') !!}>
-							<a href="{{ route('admin.noticias.create') }}">
-							<i class="icon-note"></i>
-							Nueva noticia</a>
-						</li>
-					</ul>
-				</li>
-
                 <li {!! (Request::is('admin/evento*') ? 'class="active open"' : '') !!}>
                     <a href="javascript:;">
                         <i class="icon-grid"></i>
@@ -166,6 +146,46 @@
                             <a href="{{ route('admin.eventos.create') }}">
                                 <i class="icon-note"></i>
                                 Nuevo evento</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li {!! (Request::is('admin/nota-p*') ? 'class="active open"' : '') !!}>
+                    <a href="javascript:;">
+                        <i class="icon-grid"></i>
+                        <span class="title">Notas de Prensa</span>
+                        {!! (Request::is('admin/nota-p*') ? '<span class="arrow open"></span>' : '<span class="arrow"></span>') !!}
+                    </a>
+                    <ul class="sub-menu">
+                        <li {!! (Request::is('admin/nota-prensa') ? 'class="active"' : '') !!}>
+                            <a href="{{ route('admin.nota-prensa.index') }}">
+                                <i class="icon-list"></i>
+                                Todos las notas</a>
+                        </li>
+                        <li {!! (Request::is('admin/nota-prensa/create') ? 'class="active"' : '') !!}>
+                            <a href="{{ route('admin.nota-prensa.create') }}">
+                                <i class="icon-note"></i>
+                                Nueva nota de prensa</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li {!! (Request::is('admin/noti*') ? 'class="active open"' : '') !!}>
+                    <a href="javascript:;">
+                        <i class="icon-grid"></i>
+                        <span class="title">Noticias</span>
+                        {!! (Request::is('admin/noti*') ? '<span class="arrow open"></span>' : '<span class="arrow"></span>') !!}
+                    </a>
+                    <ul class="sub-menu">
+                        <li {!! (Request::is('admin/noticias') ? 'class="active"' : '') !!}>
+                            <a href="{{ route('admin.noticias.index') }}">
+                                <i class="icon-list"></i>
+                                Todos las noticias</a>
+                        </li>
+                        <li {!! (Request::is('admin/noticias/create') ? 'class="active"' : '') !!}>
+                            <a href="{{ route('admin.noticias.create') }}">
+                                <i class="icon-note"></i>
+                                Nueva noticia</a>
                         </li>
                     </ul>
                 </li>
