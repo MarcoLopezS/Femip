@@ -70,6 +70,25 @@ class CreateInitalTables extends Migration {
             $table->softDeletes();
         });
 
+        Schema::create('nota_prensa', function(Blueprint $table)
+        {
+            $table->increments('id');
+
+            $table->string('titulo');
+            $table->string('slug_url');
+            $table->string('descripcion')->nullable();;
+            $table->text('contenido');
+            $table->string('video')->nullable();;
+
+            $table->boolean('publicar')->default(true);
+
+            $table->integer('user_id')->nullable()->default(NULL);
+
+            $table->timestamp('published_at')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
         Schema::create('eventos', function(Blueprint $table)
         {
             $table->increments('id');
@@ -136,6 +155,7 @@ class CreateInitalTables extends Migration {
         Schema::drop('imagenes');
         Schema::drop('galerias');
         Schema::drop('eventos');
+        Schema::drop('nota_prensa');
         Schema::drop('noticias');
         Schema::drop('user_profiles');
         Schema::drop('users');

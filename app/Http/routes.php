@@ -5,10 +5,13 @@ Route::get('nosotros', ['as' => 'nosotros', 'uses' => 'FrontendController@nosotr
 Route::get('mensaje-presidente', ['as' => 'nosotros.mensaje', 'uses' => 'FrontendController@nosotrosMensaje']);
 Route::get('noticias', ['as' => 'noticias', 'uses' => 'FrontendController@noticias']);
 Route::get('noticia/{id}-{url}', ['as' => 'noticias.select', 'uses' => 'FrontendController@noticiasSelect']);
+Route::get('nota-prensa', ['as' => 'nota-prensa', 'uses' => 'FrontendController@prensa']);
+Route::get('nota-prensa/{id}-{url}', ['as' => 'nota-prensa.select', 'uses' => 'FrontendController@prensaSelect']);
 Route::get('eventos', ['as' => 'eventos', 'uses' => 'FrontendController@eventos']);
 Route::get('evento/{id}-{url}', ['as' => 'eventos.select', 'uses' => 'FrontendController@eventosSelect']);
 Route::get('galerias', ['as' => 'galerias', 'uses' => 'FrontendController@galerias']);
 Route::get('galeria/{id}-{url}', ['as' => 'galerias.select', 'uses' => 'FrontendController@galeriasSelect']);
+Route::get('enlaces', ['as' => 'enlaces', 'uses' => 'FrontendController@enlaces']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);
@@ -57,6 +60,17 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         Route::delete('{noticia}/delete/{id}', ['as' => 'admin.noticias.img.delete', 'uses' => 'NoticiasController@photosDelete' ]);
     });
 
+    //NOTAS DE PRENSA
+    Route::resource('nota-prensa', 'NotaPrensaController');
+
+    Route::group(['prefix' => 'nota-prensa/images'], function(){
+        Route::get('{nota}', ['as' => 'admin.nota-prensa.img.list', 'uses' => 'NotaPrensaController@photosList' ]);
+        Route::post('{nota}/order', ['as' => 'admin.nota-prensa.img.order', 'uses' => 'NotaPrensaController@photosOrder' ]);
+        Route::get('{nota}/upload', ['as' => 'admin.nota-prensa.img.create', 'uses' => 'NotaPrensaController@photosCreate' ]);
+        Route::post('{nota}/upload', ['as' => 'admin.nota-prensa.img.store', 'uses' => 'NotaPrensaController@photosStore' ]);
+        Route::delete('{nota}/delete/{id}', ['as' => 'admin.nota-prensa.img.delete', 'uses' => 'NotaPrensaController@photosDelete' ]);
+    });
+
     //EVENTOS
     Route::resource('eventos', 'EventosController');
 
@@ -65,6 +79,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         Route::post('{evento}/order', ['as' => 'admin.eventos.img.order', 'uses' => 'EventosController@photosOrder' ]);
         Route::get('{evento}/upload', ['as' => 'admin.eventos.img.create', 'uses' => 'EventosController@photosCreate' ]);
         Route::post('{evento}/upload', ['as' => 'admin.eventos.img.store', 'uses' => 'EventosController@photosStore' ]);
+        Route::get('{evento}/edit/{id}', ['as' => 'admin.eventos.img.edit', 'uses' => 'EventosController@photosEdit' ]);
+        Route::put('{evento}/edit/{id}', ['as' => 'admin.eventos.img.update', 'uses' => 'EventosController@photosUpdate' ]);
         Route::delete('{evento}/delete/{id}', ['as' => 'admin.eventos.img.delete', 'uses' => 'EventosController@photosDelete' ]);
     });
 

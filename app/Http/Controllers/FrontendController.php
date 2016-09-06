@@ -1,6 +1,7 @@
 <?php namespace Femip\Http\Controllers;
 
 use Femip\Repositories\Admin\SliderRepo;
+use Femip\Repositories\Femip\NotaPrensaRepo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
@@ -13,6 +14,7 @@ use Femip\Repositories\Femip\NoticiaRepo;
 class FrontendController extends Controller
 {
     protected $noticiaRepo;
+    protected $notaPrensaRepo;
     protected $eventoRepo;
     protected $galeriaRepo;
     protected $sliderRepo;
@@ -22,16 +24,19 @@ class FrontendController extends Controller
      * @param EventoRepo $eventoRepo
      * @param GaleriaRepo $galeriaRepo
      * @param NoticiaRepo $noticiaRepo
+     * @param NotaPrensaRepo $notaPrensaRepo
      * @param SliderRepo $sliderRepo
      */
     public function __construct(EventoRepo $eventoRepo,
                                 GaleriaRepo $galeriaRepo,
                                 NoticiaRepo $noticiaRepo,
+                                NotaPrensaRepo $notaPrensaRepo,
                                 SliderRepo $sliderRepo)
     {
         $this->eventoRepo = $eventoRepo;
         $this->galeriaRepo = $galeriaRepo;
         $this->noticiaRepo = $noticiaRepo;
+        $this->notaPrensaRepo = $notaPrensaRepo;
         $this->sliderRepo = $sliderRepo;
     }
 
@@ -68,6 +73,20 @@ class FrontendController extends Controller
         return view('frontend.noticias-select', compact('row'));
     }
 
+    public function prensa()
+    {
+        $rows = $this->notaPrensaRepo->listaNoticias();
+
+        return view('frontend.nota-prensa', compact('rows'));
+    }
+
+    public function prensaSelect($id, $url)
+    {
+        $row = $this->notaPrensaRepo->findOrFail($id);
+
+        return view('frontend.nota-prensa-select', compact('row'));
+    }
+
     public function eventos()
     {
         $rows = $this->eventoRepo->listaEventos();
@@ -94,5 +113,10 @@ class FrontendController extends Controller
         $row = $this->galeriaRepo->findOrFail($id);
 
         return view('frontend.galerias-select', compact('row'));
+    }
+
+    public function enlaces()
+    {
+        return view('frontend.enlaces');
     }
 }
