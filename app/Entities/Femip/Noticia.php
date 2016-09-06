@@ -53,7 +53,7 @@ class Noticia extends BaseEntity {
     public function getImagenNoticiaHomeAttribute()
     {
         $imagen = $this->imagenes()->where('orden',0)->first();
-        return "/upload/".$imagen->imagen_carpeta."300x300/".$imagen->imagen;
+        return "/upload/".$imagen->imagen_carpeta."300x150/".$imagen->imagen;
     }
 
     public function getImagenNoticiaListAttribute()

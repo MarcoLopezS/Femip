@@ -1,3 +1,14 @@
+#header
+    .header-logo
+        img
+            margin 0 15px 15px 0
+
+    .header-body
+        padding 22px 0 8px 0
+
+        nav
+            padding-top 8px
+
 .page-header
     border-bottom-color #aa0708
 
@@ -13,6 +24,18 @@ article.post
 
         img
             display initial
+
+    .post-date
+        .month
+            display block
+
+        .year
+            background #CCC
+            border-radius 0 0 2px 2px
+            box-shadow 0 -1px 0 0 rgba(0, 0, 0, 0.07) inset
+            color #FFF
+            font-size 0.9em
+            padding 0 10px 2px
 
     .post-content
         font-size 16px
@@ -47,3 +70,32 @@ ul.history
                 tr
                     td
                         padding 5px
+
+.thumb-info
+    .thumb-info-inner
+        &.lugar
+            font-size 16px
+
+    .thumb-info-type
+        position absolute
+        float none
+        bottom 10px
+        margin 0
+        color #fff
+
+.portfolio-list
+    &.enlaces
+        li
+            span.thumb-info
+                min-height 135px
+                display inline-table
+                width 100%
+
+                .thumb-info-wrapper
+                    display table-cell
+                    vertical-align middle
+
+                    img
+                        max-height 120px
+                        width inherit
+                        margin 0 auto

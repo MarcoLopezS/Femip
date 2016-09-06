@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-9">
                     <h2 class="mb-lg"><strong>Federación Mundial de Instituciones Peruanas</strong></h2>
-                    <p class="lead">El objetivo más importante de las convenciones de la FEMIP, son las conferencias, donde se tratan temas de vital importancia para nuestra comunidad peruana residente en el extranjero y por ende afecta a sus familiares que viven en el Perú.</p>
+                    <p class="lead" style="text-align:justify;">El objetivo más importante de las convenciones de la FEMIP, son las conferencias, donde se tratan temas de vital importancia para nuestra comunidad peruana residente en el extranjero y por ende afecta a sus familiares que viven en el Perú.</p>
                 </div>
             </div>
         </div>
@@ -82,9 +82,9 @@
                     <p>Julio A. Salazar<br />
                         Presidente</p>
 
-                    <h3 style="text-align:center"><strong>¡¡¡VIVA EL PERU!!!</strong></h3>
-                    <h3 style="text-align:center"><strong>¡¡¡VIVA EL QUINTO SUYO!!!</strong></h3>
-                    <h2 style="text-align:center"><strong>¡¡¡NOS VEMOS EN OKINAWA!!!</strong></h2>
+                    <h5 style="text-align:center"><strong>¡VIVA EL PERU!</strong></h5>
+                    <h5 style="text-align:center"><strong>¡VIVA EL QUINTO SUYO!</strong></h5>
+                    <h4 style="text-align:center"><strong>¡NOS VEMOS EN OKINAWA!</strong></h4>
                 </div>
             </div>
         </div>
