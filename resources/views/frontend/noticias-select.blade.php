@@ -11,6 +11,14 @@
 @endphp
 
 @section('contenido_header')
+    {{-- Open Graph --}}
+    <meta property="og:title" content='{{ $row_titulo  }}'>
+    <meta property="og:type" content='article' >
+    <meta property="og:url" content='{{ $row_url }}' >
+    <meta property="og:image" content='{{ $row_imagen }}' >
+    <meta property="og:site_name" content='' >
+    <meta property="fb:admins" content='610468802466436'>
+    <meta property="og:description" content='{{ $row_descripcion }}'>
 @endsection
 
 @section('contenido_body')
