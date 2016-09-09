@@ -10,6 +10,7 @@
 
     <meta name="keywords" content="femip, federacion, mundial, instituciones, peruanas, peruanes, extranjero, convenciones, convencion, japon, julio salazar" />
     <meta name="description" content="Federación Mundial de Instituciones Peruanas">
+    <meta name="robots" content="index, follow">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -84,12 +85,13 @@
                                         <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
                                     </ul>
                                 </li>
-                                {{--<li {!! (Request::is('inscripcion*') ? 'class="active"' : '') !!}><a href="/inscripcion">Ficha de Inscripción</a></li>--}}
+                                <li {!! (Request::is('inscripcion*') ? 'class="active"' : '') !!}><a href="/inscripcion">Inscripción</a></li>
                                 <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
                                 <li {!! (Request::is('nota*') ? 'class="active"' : '') !!}><a href="/nota-prensa">Notas de Prensa</a></li>
                                 <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
                                 <li {!! (Request::is('galeria*') ? 'class="active"' : '') !!}><a href="/galerias">Galería de Fotos</a></li>
                                 <li {!! (Request::is('enlace*') ? 'class="active"' : '') !!}><a href="/enlaces">Enlaces</a></li>
+                                <li {!! (Request::is('contacto*') ? 'class="active"' : '') !!}><a href="/contacto">Contacto</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -105,18 +107,22 @@
             <div class="footer-copyright">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            <p>© Copyright 2016. Todos los derechos reservados.</p>
+                        <div class="col-md-2">
+                            <p>© Copyright 2016.</p>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-10">
                             <nav id="sub-menu">
                                 <ul>
                                     <li><a href="/">Inicio</a></li>
                                     <li><a href="/nosotros">¿Quiénes somos?</a></li>
+                                    <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
+                                    <li><a href="/inscripcion">Inscripción</a></li>
                                     <li><a href="/eventos">Eventos</a></li>
+                                    <li><a href="/nota-prensa">Notas de Prensa</a></li>
                                     <li><a href="/noticias">Noticias</a></li>
                                     <li><a href="/galerias">Galería de Fotos</a></li>
-                                    {{--<li><a href="#">Enlaces</a></li>--}}
+                                    <li><a href="/enlaces">Enlaces</a></li>
+                                    <li><a href="/contacto">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
