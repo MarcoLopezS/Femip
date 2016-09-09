@@ -28,6 +28,7 @@
                             $row_url = $row->url;
                             $row_imagen = $row->imagen_galeria_list;
                             $row_descripcion = $row->descripcion;
+                            $row_lugar = $row->lugar;
                             $row_fecha = $row->fecha;
                         @endphp
                     <li class="col-md-6">
@@ -38,6 +39,7 @@
                                         <img src="{{ $row_imagen }}" class="img-responsive" alt="{{ $row_titulo }}">
                                         <span class="thumb-info-title">
                                             <span class="thumb-info-inner">{{ $row_titulo }}</span>
+                                            <span class="thumb-info-inner lugar">{{ $row_lugar }}</span>
                                         </span>
                                         <span class="thumb-info-action">
                                             <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>

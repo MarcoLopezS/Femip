@@ -10,7 +10,7 @@ class Galeria extends BaseEntity {
 
     protected $dates = ['published_at','deleted_at'];
 
-	protected $fillable = ['titulo','slug_url','descripcion','publicar','published_at','user_id'];
+	protected $fillable = ['titulo','slug_url','descripcion','lugar','publicar','published_at','user_id'];
 
     protected $table = "galerias";
 

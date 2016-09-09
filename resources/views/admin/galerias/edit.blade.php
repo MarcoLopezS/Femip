@@ -84,6 +84,13 @@
                                 <div class="form-body">
 
                                     <div class="form-group">
+                                        {!! Form::label('lugar', 'Lugar', ['class' => 'col-md-4 control-label']) !!}
+                                        <div class="col-md-8">
+                                            {!! Form::text('lugar', null, ['class' => 'form-control']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
                                         {!! Form::label('publicar', 'Publicar', ['class' => 'col-md-2 control-label']) !!}
                                         <div class="col-md-10">
                                             <div class="radio-list">
