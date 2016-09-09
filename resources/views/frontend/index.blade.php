@@ -77,8 +77,6 @@
 
                     <p>Acompa&ntilde;amos y no pierdan esta oportunidad de tambi&eacute;n hacer turismo en el pa&iacute;s del Sol naciente.&nbsp; Tenemos un programa tur&iacute;stico y de atracciones muy interesante para complementarlos con la Convenci&oacute;n.</p>
 
-                    <p>Pr&oacute;ximamente enviaremos la ficha de inscripci&oacute;n y los datos del hotel.</p>
-
                     <p>Julio A. Salazar<br />
                         Presidente</p>
 

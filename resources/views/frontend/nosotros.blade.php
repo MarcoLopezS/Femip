@@ -27,7 +27,7 @@
             <div class="col-md-4">
                 <div class="featured-box featured-box-primary">
                     <div class="box-content">
-                        <img src="/imagenes/logo-180.png" alt="FEMIP" title="FEMIP">
+                        <img src="/imagenes/logo-180.png" class="img-responsive" alt="FEMIP" title="FEMIP">
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h3 class="heading-primary mt-xl">Nuestra <strong>Historia</strong></h3>
+                <h3 class="heading-primary mt-xl"><strong>Nuestra Historia</strong></h3>
             </div>
         </div>
 
@@ -101,7 +101,7 @@
                                     </tr>
                                     <tr>
                                         <td><strong>REPRESENTANTE EN VENEZUELA</strong></td>
-                                        <td>: ELSA MENDOZA DE G&Oacute;MEZ</td>
+                                        <td>: BETTY MENDOZA DE G&Oacute;MEZ</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -135,7 +135,7 @@
                                     </tr>
                                     <tr>
                                         <td><strong>SECRETARIA DE RELACIONES PUBLICAS</strong></td>
-                                        <td>: ELSA MENDOZA DE G&Oacute;MEZ</td>
+                                        <td>: BETTY MENDOZA DE G&Oacute;MEZ</td>
                                     </tr>
                                     <tr>
                                         <td><strong>SECRETARIO DE COORDINACION</strong></td>
