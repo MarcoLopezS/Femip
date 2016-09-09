@@ -22,7 +22,7 @@
             <div class="">
                 <ul class="portfolio-list enlaces" data-sort-id="portfolio">
 
-                    <li class="col-md-1-5">
+                    <li class="col-md-3">
                         <div class="portfolio-item">
                             <a href="http://clubdelabancaycomercio.com/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -37,7 +37,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-1-5">
+                    <li class="col-md-3">
                         <div class="portfolio-item">
                             <a href="http://www.llicaperuanitos.org/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -52,7 +52,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-1-5">
+                    <li class="col-md-3">
                         <div class="portfolio-item">
                             <a href="http://visionsofperu.com/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -67,7 +67,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-1-5">
+                    <li class="col-md-3">
                         <div class="portfolio-item">
                             <a href="http://www.thinkfirst-peru.org/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -82,12 +82,27 @@
                         </div>
                     </li>
 
-                    <li class="col-md-1-5">
+                    <li class="col-md-3">
                         <div class="portfolio-item">
                             <a href="http://www.npaf-peru.org/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
                                     <span class="thumb-info-wrapper">
                                         <img src="/imagenes/logos/npaf.jpg" class="img-responsive" alt="Neurosurgical Peruvian American Foundation (NPAF)">
+                                        <span class="thumb-info-action">
+                                            <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="col-md-3">
+                        <div class="portfolio-item">
+                            <a href="http://www.apuinka.com/" target="_blank">
+                                <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/imagenes/logos/apuinka.jpg" class="img-responsive" alt="APU INKA">
                                         <span class="thumb-info-action">
                                             <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
                                         </span>
