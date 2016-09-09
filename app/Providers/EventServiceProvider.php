@@ -2,6 +2,8 @@
 
 namespace Femip\Providers;
 
+use Femip\Events\FormularioContacto;
+use Femip\Events\FormularioInscripcion;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -13,8 +15,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Femip\Events\SomeEvent' => [
-            'Femip\Listeners\EventListener',
+        'Femip\Events\FormularioContacto' => [
+            'Femip\Listeners\EnvioMensajeContacto'
+        ],
+        'Femip\Events\FormularioInscripcion' => [
+            'Femip\Listeners\EnvioMensajeInscripcion'
         ],
     ];
 
@@ -28,6 +33,12 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot($events);
 
-        //
+        $events->listen('eloquent.created: Femip\Entities\Admin\ContactoMensaje', function ($model) {
+            event(new FormularioContacto($model));
+        });
+
+        $events->listen('eloquent.created: Femip\Entities\Femip\Inscripcion', function ($model) {
+            event(new FormularioInscripcion($model));
+        });
     }
 }

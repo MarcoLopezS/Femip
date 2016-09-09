@@ -1,11 +1,11 @@
 <?php namespace Femip\Http\Controllers;
 
+use Femip\Entities\Admin\ContactoMensaje;
+use Femip\Entities\Femip\Inscripcion;
+use Femip\Events\FormularioContacto;
 use Femip\Repositories\Admin\SliderRepo;
 use Femip\Repositories\Femip\NotaPrensaRepo;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Routing\Redirector;
-use Femip\Http\Controllers\Controller;
 
 use Femip\Repositories\Femip\EventoRepo;
 use Femip\Repositories\Femip\GaleriaRepo;
@@ -40,6 +40,9 @@ class FrontendController extends Controller
         $this->sliderRepo = $sliderRepo;
     }
 
+    /*
+     * HOME
+     */
     public function index()
     {
         $noticias = $this->noticiaRepo->listaNoticias();
@@ -49,6 +52,9 @@ class FrontendController extends Controller
         return view('frontend.index', compact('noticias', 'slider'));
     }
 
+    /*
+     * NOSOTROS
+     */
     public function nosotros()
     {
         return view('frontend.nosotros');
@@ -59,6 +65,9 @@ class FrontendController extends Controller
         return view('frontend.nosotros-mensaje');
     }
 
+    /*
+     * NOTICIAS
+     */
     public function noticias()
     {
         $rows = $this->noticiaRepo->listaNoticias();
@@ -73,6 +82,9 @@ class FrontendController extends Controller
         return view('frontend.noticias-select', compact('row'));
     }
 
+    /*
+     * NOTAS DE PRENSA
+     */
     public function prensa()
     {
         $rows = $this->notaPrensaRepo->listaNoticias();
@@ -87,6 +99,9 @@ class FrontendController extends Controller
         return view('frontend.nota-prensa-select', compact('row'));
     }
 
+    /*
+     * EVENTOS
+     */
     public function eventos()
     {
         $rows = $this->eventoRepo->listaEventos();
@@ -101,6 +116,9 @@ class FrontendController extends Controller
         return view('frontend.eventos-select', compact('row'));
     }
 
+    /*
+     * GALERIA DE FOTOS
+     */
     public function galerias()
     {
         $rows = $this->galeriaRepo->listaGalerias();
@@ -115,8 +133,100 @@ class FrontendController extends Controller
         return view('frontend.galerias-select', compact('row'));
     }
 
+    /*
+     * ENLACES
+     */
     public function enlaces()
     {
         return view('frontend.enlaces');
+    }
+
+    /*
+     * CONTACTO
+     */
+    public function contactoGet()
+    {
+        return view('frontend.contacto');
+    }
+
+    public function contactoPost(Request $request)
+    {
+        //REGLAS
+        $rules = [
+            'nombre'  => 'required',
+            'apellidos' => 'required',
+            'email'   => 'required|email',
+            'mensaje' => 'required'
+        ];
+
+        //VALIDACION
+        $this->validate($request, $rules);
+
+//        //VALIDACION DE CAPTCHA
+//        if($this->captchaCheck() == false)
+//        {
+//            return redirect()->back()
+//                ->withErrors(['Error de captcha'])
+//                ->withInput();
+//        }
+
+        //GUARDAR EN BD
+        $contMensaje = new ContactoMensaje($request->all());
+        $contMensaje->type = 'contacto';
+        $contMensaje->save();
+
+        $mensaje = 'Tu mensaje ha sido enviado.';
+
+        return [
+            'message' => $mensaje
+        ];
+
+    }
+
+    /*
+     * INSCRIPCION
+     */
+
+    public function inscripcionGet()
+    {
+        return view('frontend.inscripcion');
+    }
+
+    public function inscripcionPost(Request $request)
+    {
+        //REGLAS
+        $rules = [
+            'asoc_nombre'  => 'required',
+            'asoc_pais' => 'required',
+            'asoc_direccion' => 'required',
+            'asoc_telefono' => 'required',
+            'asoc_email' => 'required|email',
+            'rep_cargo' => 'required',
+            'rep_nombre' => 'required',
+            'rep_direccion' => 'required',
+            'rep_telefono' => 'required',
+            'rep_email' => 'required|email'
+        ];
+
+        //VALIDACION
+        $this->validate($request, $rules);
+
+//        //VALIDACION DE CAPTCHA
+//        if($this->captchaCheck() == false)
+//        {
+//            return redirect()->back()
+//                ->withErrors(['Error de captcha'])
+//                ->withInput();
+//        }
+
+        //GUARDAR EN BD
+        $contMensaje = new Inscripcion($request->all());
+        $contMensaje->save();
+
+        $mensaje = 'El envío de tus datos se ha realizado con éxito.';
+
+        return [
+            'message' => $mensaje
+        ];
     }
 }

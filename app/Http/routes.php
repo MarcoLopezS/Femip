@@ -12,6 +12,10 @@ Route::get('evento/{id}-{url}', ['as' => 'eventos.select', 'uses' => 'FrontendCo
 Route::get('galerias', ['as' => 'galerias', 'uses' => 'FrontendController@galerias']);
 Route::get('galeria/{id}-{url}', ['as' => 'galerias.select', 'uses' => 'FrontendController@galeriasSelect']);
 Route::get('enlaces', ['as' => 'enlaces', 'uses' => 'FrontendController@enlaces']);
+Route::get('contacto', ['as' => 'contacto.get', 'uses' => 'FrontendController@contactoGet']);
+Route::post('contacto', ['as' => 'contacto.post', 'uses' => 'FrontendController@contactoPost']);
+Route::get('inscripcion', ['as' => 'inscripcion.get', 'uses' => 'FrontendController@inscripcionGet']);
+Route::post('inscripcion', ['as' => 'inscripcion.post', 'uses' => 'FrontendController@inscripcionPost']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);
