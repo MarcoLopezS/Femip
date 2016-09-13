@@ -27,6 +27,11 @@ class Evento extends BaseEntity {
         return $this->morphMany(Imagen::class, 'imagenable');
     }
 
+    public function tour()
+    {
+        return $this->hasMany(LugaresTuristicos::class);
+    }
+
     /*
      * GETTERS
      */

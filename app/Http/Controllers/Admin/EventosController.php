@@ -1,6 +1,8 @@
 <?php namespace Femip\Http\Controllers\Admin;
 
 use Femip\Entities\Femip\Evento;
+use Femip\Entities\Femip\LugaresTuristicos;
+use Femip\Repositories\Femip\LugaresTuristicosRepo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
@@ -22,18 +24,22 @@ class EventosController extends Controller {
 
     protected $eventoRepo;
     protected $imagenRepo;
+    protected $lugaresTuristicosRepo;
 
     /**
      * NoticiasController constructor.
      * @param EventoRepo $eventoRepo
      * @param ImagenRepo $imagenRepo
+     * @param LugaresTuristicosRepo $lugaresTuristicosRepo
      * @internal param eventoRepo $eventoRepo
      */
     public function __construct(EventoRepo $eventoRepo,
-                                ImagenRepo $imagenRepo)
+                                ImagenRepo $imagenRepo,
+                                LugaresTuristicosRepo $lugaresTuristicosRepo)
 	{
         $this->eventoRepo = $eventoRepo;
         $this->imagenRepo = $imagenRepo;
+        $this->lugaresTuristicosRepo = $lugaresTuristicosRepo;
     }
 
     /**
@@ -185,7 +191,7 @@ class EventosController extends Controller {
     {
         if($request->ajax())
         {
-            $sortedval = $_POST['listPhoto'];
+            $sortedval = $request->input('listPhoto');
             try{
                 foreach ($sortedval as $key => $sort){
                     $sortPhoto = Imagen::find($sort);
@@ -289,6 +295,131 @@ class EventosController extends Controller {
         }
 
         return redirect()->route('admin.eventos.img.list', $post);
+    }
+
+
+    /**
+     * Fotos de Lugares Turisticos de Evento
+     *
+     * @param $post
+     * @return Response
+     * @internal param int $id
+     */
+    public function tourList($post)
+    {
+        $posts = $this->eventoRepo->findOrFail($post);
+        $photos = $posts->tour;
+
+        return view('admin.eventos-tour.list', compact('posts', 'photos'));
+    }
+
+    public function tourOrder($post, Request $request)
+    {
+        if($request->ajax())
+        {
+            $sortedval = $request->input('listPhoto');
+            try{
+                foreach ($sortedval as $key => $sort){
+                    $sortPhoto = LugaresTuristicos::find($sort);
+                    $sortPhoto->orden = $key;
+                    $sortPhoto->save();
+                }
+            }
+            catch (Exception $e)
+            {
+                return 'false';
+            }
+        }
+    }
+
+    public function tourCreate($post)
+    {
+        $posts = $this->eventoRepo->findOrFail($post);
+
+        return view('admin.eventos-tour.upload', compact('posts'));
+    }
+
+    public function tourStore($post, Request $request)
+    {
+        //CREAR CARPETA CON FECHA Y MOVER IMAGEN
+        $this->eventoRepo->CrearCarpeta();
+        $ruta = "upload/".$this->eventoRepo->FechaCarpeta();
+        $archivo = $request->file('file');
+        $imagen = $this->eventoRepo->FileMove($archivo, $ruta);
+        $imagen_carpeta = $this->eventoRepo->FechaCarpeta();
+
+        //BUSCAR ID DE POST
+        $row = $this->eventoRepo->findOrFail($post);
+
+        //GUARDAR IMAGEN
+        $row->tour()->create([
+            'imagen' => $imagen,
+            'imagen_carpeta' => $imagen_carpeta
+        ]);
+    }
+
+    public function tourEdit($post, $id)
+    {
+        $posts = $this->eventoRepo->findOrFail($post);
+        $photo = $this->lugaresTuristicosRepo->findOrFail($id);
+
+        return view('admin.eventos-tour.edit', compact('posts', 'photo'));
+    }
+
+    public function tourUpdate($post, $id, Request $request)
+    {
+        $postPhoto = $this->lugaresTuristicosRepo->findOrFail($id);
+
+        $ruleImg = [
+            'imagen' => 'mimes:jpg,jpeg,png'
+        ];
+
+        //VALIDACION DE DATOS
+        $this->validate($request, $ruleImg);
+
+        //VARIABLES
+        $titulo = $request->input('titulo');
+
+        //VERIFICAR SI SUBIO IMAGEN
+        if($request->hasFile('imagen'))
+        {
+            $this->lugaresTuristicosRepo->CrearCarpeta();
+            $ruta = "upload/".$this->lugaresTuristicosRepo->FechaCarpeta();
+            $archivo = $request->file('imagen');
+            $imagen = $this->lugaresTuristicosRepo->FileMove($archivo, $ruta);
+            $imagen_carpeta = $this->lugaresTuristicosRepo->FechaCarpeta();
+        }else{
+            $imagen = $request->input('imagen_actual');
+            $imagen_carpeta = $request->input('imagen_actual_carpeta');
+        }
+
+        //GUARDAR DATOS
+        $postPhoto->imagen = $imagen;
+        $postPhoto->imagen_carpeta = $imagen_carpeta;
+        $this->lugaresTuristicosRepo->update($postPhoto, $request->all());
+
+        //MENSAJE
+        flash()->success('El registro se actualizó satisfactoriamente.');
+
+        //REDIRECCIONAR A PAGINA PARA VER DATOS
+        return redirect()->route('admin.eventos.tour.list', $post);
+    }
+
+    public function tourDelete($post, $id, Request $request)
+    {
+        $photo = $this->lugaresTuristicosRepo->findOrFail($id);
+        $photo->delete();
+
+        $message = 'El registro se eliminó satisfactoriamente.';
+
+        if($request->ajax())
+        {
+            return response()->json([
+                'message' => $message
+            ]);
+        }
+
+        return redirect()->route('admin.eventos.tour.list', $post);
     }
 	
 }

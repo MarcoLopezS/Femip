@@ -88,7 +88,17 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         Route::delete('{evento}/delete/{id}', ['as' => 'admin.eventos.img.delete', 'uses' => 'EventosController@photosDelete' ]);
     });
 
-    //EVENTOS
+    Route::group(['prefix' => 'eventos/tour'], function(){
+        Route::get('{evento}', ['as' => 'admin.eventos.tour.list', 'uses' => 'EventosController@tourList' ]);
+        Route::post('{evento}/order', ['as' => 'admin.eventos.tour.order', 'uses' => 'EventosController@tourOrder' ]);
+        Route::get('{evento}/upload', ['as' => 'admin.eventos.tour.create', 'uses' => 'EventosController@tourCreate' ]);
+        Route::post('{evento}/upload', ['as' => 'admin.eventos.tour.store', 'uses' => 'EventosController@tourStore' ]);
+        Route::get('{evento}/edit/{id}', ['as' => 'admin.eventos.tour.edit', 'uses' => 'EventosController@tourEdit' ]);
+        Route::put('{evento}/edit/{id}', ['as' => 'admin.eventos.tour.update', 'uses' => 'EventosController@tourUpdate' ]);
+        Route::delete('{evento}/delete/{id}', ['as' => 'admin.eventos.tour.delete', 'uses' => 'EventosController@tourDelete' ]);
+    });
+
+    //GALERIAS
     Route::resource('galerias', 'GaleriasController');
 
     Route::group(['prefix' => 'galerias/images'], function(){

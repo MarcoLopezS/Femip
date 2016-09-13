@@ -97,6 +97,7 @@
                                             <li><a href="{{ route('admin.eventos.edit', $item->id) }}">Editar</a></li>
                                             <li><a href="#delete" class="btn-delete">Eliminar</a></li>
                                             <li><a href="{{ route('admin.eventos.img.list', $item->id) }}">Imagenes</a></li>
+                                            <li><a href="{{ route('admin.eventos.tour.list', $item->id) }}">Lugares Turísticos</a></li>
                                         </ul>
                                     </div>
                                 </td>
