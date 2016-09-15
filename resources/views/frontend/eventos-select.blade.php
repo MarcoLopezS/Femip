@@ -68,7 +68,7 @@
                                     $tour_imagen = $tour->imagen_select;
                                     $tour_imagen_th = $tour->imagen_select_th;
                                 @endphp
-                            <li class="col-md-6">
+                            <li class="col-md-4">
                                 <div class="portfolio-item">
                                     <a rel="gallery" title="{{ $tour_titulo }}" class="fancybox" href="{{ $tour_imagen }}">
                                         <span class="thumb-info thumb-info-lighten">
