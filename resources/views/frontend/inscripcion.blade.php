@@ -22,7 +22,7 @@
             <div class="col-md-5">
                 <aside class="sidebar" id="sidebar" data-plugin-sticky data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}'>
                     <h2><strong>Inscripción</strong></h2>
-                    <p class="lead">En mi condición de Presidente de la FEMIP, deseo invitar a usted y por su intermedio a la Institución que representa a que forme parte nuestra.</p>
+                    <p style="text-align:justify;" class="lead">En mi condición de Presidente de la FEMIP, deseo invitar a usted y por su intermedio a la Institución que representa a que forme parte nuestra.</p>
                 </aside>
             </div>
 
@@ -34,7 +34,7 @@
 
                         <div class="block-header" style="padding-top: 0;">
                             <h2>Los datos han sido enviados.</h2>
-                            <p class="lead">En breve nos estaremos comunicando contigo.</p>
+                            <p class="lead">Muchas gracias por inscribirse.</p>
                         </div>
 
                     </div>

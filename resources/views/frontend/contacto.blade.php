@@ -24,7 +24,7 @@
 
                     <div class="block-header" style="padding-top: 0;">
                         <h2>Tu mensaje ha sido enviado.</h2>
-                        <p class="lead">En breve nos estaremos comunicando contigo.</p>
+                        <p class="lead">Muchas gracias por contactarse con nosotros.</p>
                     </div>
 
                 </div>

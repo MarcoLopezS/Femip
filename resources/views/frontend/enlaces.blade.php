@@ -118,7 +118,7 @@
                         </div>
                     </div>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.sunat.gob.pe/orientacionaduanera/incentivosmigratorios/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -133,7 +133,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.peru.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -148,7 +148,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.rree.gob.pe/SitePages/home.aspx" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -163,7 +163,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.mimp.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -178,7 +178,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.promperu.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -193,7 +193,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.congreso.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -208,7 +208,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="https://www.reniec.gob.pe/portal/intro.htm" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -223,7 +223,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="http://www.jne.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -238,7 +238,7 @@
                         </div>
                     </li>
 
-                    <li class="col-md-3">
+                    <li class="col-md-1-5">
                         <div class="portfolio-item">
                             <a href="https://www.onpe.gob.pe/" target="_blank">
                                 <span class="thumb-info thumb-info-lighten thumb-info-no-zoom">

@@ -26,8 +26,8 @@
             </div>
             <div class="col-md-4">
                 <div class="featured-box featured-box-primary">
-                    <div class="box-content">
-                        <img src="/imagenes/logo-180.png" class="img-responsive" alt="FEMIP" title="FEMIP">
+                    <div class="box-content" style="text-align:center;">
+                        <img width="150" src="/imagenes/logo.jpg" alt="FEMIP" title="FEMIP">
                     </div>
                 </div>
             </div>
