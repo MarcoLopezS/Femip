@@ -91,8 +91,10 @@ return [
     |
     */
 
-    'custom'               => [
-
+    'custom' => [
+        'nombre_asociacion' => [
+            'required_if' => 'El campo Nombre de Asociación es obligatorio si a activado la casilla de Pertenece a una Asociación'
+        ]
     ],
 
     /*
@@ -148,7 +150,12 @@ return [
         'rep_telefono'          => 'Teléfono de Representante',
         'rep_email'             => 'Email de Representante',
         'nombre'                => 'Nombre',
+        'nombres'               => 'Nombres',
         'apellidos'             => 'Apellidos',
+        'direccion'             => 'Dirección',
+        'telefonos'             => 'Teléfono(s)',
+        'primera_vez'           => 'Asiste por primera vez',
+        'pertenece_asociacion'  => 'Pertenece a una Asociación',
         'mensaje'               => 'Mensaje'
     ],
 

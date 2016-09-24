@@ -16,6 +16,8 @@ Route::get('contacto', ['as' => 'contacto.get', 'uses' => 'FrontendController@co
 Route::post('contacto', ['as' => 'contacto.post', 'uses' => 'FrontendController@contactoPost']);
 Route::get('inscripcion', ['as' => 'inscripcion.get', 'uses' => 'FrontendController@inscripcionGet']);
 Route::post('inscripcion', ['as' => 'inscripcion.post', 'uses' => 'FrontendController@inscripcionPost']);
+Route::get('inscripcion-evento', ['as' => 'inscripcion-evento.get', 'uses' => 'FrontendController@inscripcionEventoGet']);
+Route::post('inscripcion-evento', ['as' => 'inscripcion-evento.post', 'uses' => 'FrontendController@inscripcionEventoPost']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);

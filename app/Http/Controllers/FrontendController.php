@@ -2,6 +2,7 @@
 
 use Femip\Entities\Admin\ContactoMensaje;
 use Femip\Entities\Femip\Inscripcion;
+use Femip\Entities\Femip\InscripcionEvento;
 use Femip\Events\FormularioContacto;
 use Femip\Repositories\Admin\SliderRepo;
 use Femip\Repositories\Femip\NotaPrensaRepo;
@@ -229,4 +230,50 @@ class FrontendController extends Controller
             'message' => $mensaje
         ];
     }
+
+    /*
+     * INSCRIPCION EVENTO
+     */
+    public function inscripcionEventoGet()
+    {
+        return view('frontend.inscripcion-evento');
+    }
+
+    public function inscripcionEventoPost(Request $request)
+    {
+        //REGLAS
+        $rules = [
+            'nombres'  => 'required',
+            'apellidos' => 'required',
+            'direccion' => 'required',
+            'telefonos' => 'required',
+            'email' => 'required|email',
+            'primera_vez' => 'required|in:0,1',
+            'pertenece_asociacion' => 'required|in:0,1',
+            'nombre_asociacion' => 'required_if:pertenece_asociacion,1'
+        ];
+
+        //VALIDACION
+        $this->validate($request, $rules);
+
+//        //VALIDACION DE CAPTCHA
+//        if($this->captchaCheck() == false)
+//        {
+//            return redirect()->back()
+//                ->withErrors(['Error de captcha'])
+//                ->withInput();
+//        }
+
+        //GUARDAR EN BD
+        $contMensaje = new InscripcionEvento($request->all());
+        $contMensaje->evento_id = 2;
+        $contMensaje->save();
+
+        $mensaje = 'El envío de tus datos se ha realizado con éxito.';
+
+        return [
+            'message' => $mensaje
+        ];
+    }
+
 }

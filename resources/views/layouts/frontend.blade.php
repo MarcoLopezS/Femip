@@ -85,7 +85,7 @@
                                         <li><a href="/mensaje-presidente">Mensaje del Presidente</a></li>
                                     </ul>
                                 </li>
-                                <li {!! (Request::is('inscripcion*') ? 'class="active"' : '') !!}><a href="/inscripcion">Inscripción</a></li>
+                                <li {!! (Request::is('inscripcion') ? 'class="active"' : '') !!}><a href="/inscripcion">Inscripción</a></li>
                                 <li {!! (Request::is('evento*') ? 'class="active"' : '') !!}><a href="/eventos">Eventos</a></li>
                                 <li {!! (Request::is('nota*') ? 'class="active"' : '') !!}><a href="/nota-prensa">Notas de Prensa</a></li>
                                 <li {!! (Request::is('noticia*') ? 'class="active"' : '') !!}><a href="/noticias">Noticias</a></li>
