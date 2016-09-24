@@ -10,7 +10,7 @@ class Galeria extends BaseEntity {
 
     protected $dates = ['published_at','deleted_at'];
 
-	protected $fillable = ['titulo','slug_url','descripcion','lugar','publicar','published_at','user_id'];
+	protected $fillable = ['titulo','slug_url','descripcion','lugar','fecha','publicar','published_at','user_id'];
 
     protected $table = "galerias";
 
@@ -33,11 +33,6 @@ class Galeria extends BaseEntity {
     public function getUrlAttribute()
     {
         return route('galerias.select', [$this->id, $this->slug_url]);
-    }
-
-    public function getFechaAttribute()
-    {
-        return fechaTexto($this->published_at);
     }
 
     public function getImagenGaleriaListAttribute()

@@ -41,6 +41,7 @@
                                             <span class="thumb-info-inner">{{ $row_titulo }}</span>
                                             <span class="thumb-info-inner lugar">{{ $row_lugar }}</span>
                                         </span>
+                                        <span class="thumb-info-type">{{ $row_fecha }}</span>
                                         <span class="thumb-info-action">
                                             <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
                                         </span>

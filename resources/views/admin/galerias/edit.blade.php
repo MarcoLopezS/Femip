@@ -91,6 +91,13 @@
                                     </div>
 
                                     <div class="form-group">
+                                        {!! Form::label('fecha', 'Fecha de Evento', ['class' => 'col-md-4 control-label']) !!}
+                                        <div class="col-md-8">
+                                            {!! Form::text('fecha', null, ['class' => 'form-control']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
                                         {!! Form::label('publicar', 'Publicar', ['class' => 'col-md-2 control-label']) !!}
                                         <div class="col-md-10">
                                             <div class="radio-list">

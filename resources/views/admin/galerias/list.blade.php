@@ -48,7 +48,6 @@
                             <thead>
                                 <tr>
                                     <th>Titulo</th>
-                                    <th>Publicado</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -77,7 +76,6 @@
                         <thead>
                             <tr>
                                 <th>Titulo</th>
-                                <th class="text-center">Fecha publicación</th>
                                 <th class="text-center">Publicar</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
@@ -86,7 +84,6 @@
                             @foreach($rows as $item)
                             <tr data-id="{{ $item->id }}" data-title="{{ $item->titulo }}">
                                 <td>{{ $item->titulo }}</td>
-                                <td>{{ $item->fecha }}</td>
                                 <td class="text-center">
                                     {!! $item->publicar ? '<span class="badge badge-success badge-roundless">SI</span>' : '<span class="badge badge-default badge-roundless">NO</span>' !!}
                                 </td>
