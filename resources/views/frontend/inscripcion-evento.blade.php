@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Ficha de Pre-Inscripción | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 
@@ -30,7 +34,7 @@
                             <div class="plan">
                                 <h3>
                                     Costo de partticipación por persona
-                                    <span class="mb-sm mt-sm">US$ 180</span>
+                                    <span class="mb-sm mt-sm">US$ 150</span>
                                     Incluye:
                                 </h3>
 
@@ -45,12 +49,12 @@
                                             <td><strong>US$ 40.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td>Cena de Gala, Orquesta</td>
+                                            <td>Cena de Gala</td>
                                             <td><strong>US$ 55.00</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Derecho de Inscripción</td>
-                                            <td><strong>US$ 50.00</strong></td>
+                                            <td><strong>US$ 20.00</strong></td>
                                         </tr>
                                     </tbody>
                                 </table>

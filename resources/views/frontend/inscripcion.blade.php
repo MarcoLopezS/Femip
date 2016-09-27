@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Inscripción | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 

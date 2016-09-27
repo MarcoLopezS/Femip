@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Contacto | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 

@@ -10,6 +10,10 @@
     $row_fecha_mes = $row->fecha_mes;
 @endphp
 
+@section('titulo')
+    {{ $row_titulo }} | @parent
+@endsection
+
 @section('contenido_header')
     {{-- Open Graph --}}
     <meta property="og:title" content='{{ $row_titulo  }}'>

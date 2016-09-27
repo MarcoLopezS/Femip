@@ -8,6 +8,10 @@
     $row_contenido = $row->contenido;
 @endphp
 
+@section('titulo')
+    {{ $row_titulo }} | @parent
+@endsection
+
 @section('contenido_header')
     {{-- Open Graph --}}
     <meta property="og:title" content='{{ $row_titulo  }}'>

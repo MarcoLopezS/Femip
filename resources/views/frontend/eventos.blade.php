@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Eventos | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 

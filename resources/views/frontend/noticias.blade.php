@@ -3,6 +3,10 @@
 @section('contenido_header')
 @endsection
 
+@section('titulo')
+    Noticias | @parent
+@endsection
+
 @section('contenido_body')
 
     <section class="page-header">

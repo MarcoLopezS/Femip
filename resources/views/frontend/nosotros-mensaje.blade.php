@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Mensaje del Presidente | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 

@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    ¿Quiénes somos? | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 

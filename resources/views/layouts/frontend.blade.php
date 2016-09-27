@@ -6,7 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Federación Mundial de Instituciones Peruanas - FEMIP</title>
+    <title>
+        @section('titulo')
+            Federación Mundial de Instituciones Peruanas - FEMIP
+        @show
+    </title>
 
     <meta name="keywords" content="femip, federacion, mundial, instituciones, peruanas, peruanes, extranjero, convenciones, convencion, japon, julio salazar" />
     <meta name="description" content="Federación Mundial de Instituciones Peruanas">

@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('titulo')
+    Notas de Prensa | @parent
+@endsection
+
 @section('contenido_header')
 @endsection
 
