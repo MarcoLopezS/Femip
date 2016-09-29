@@ -3,6 +3,7 @@
 use Femip\Entities\Admin\ContactoMensaje;
 use Femip\Entities\Femip\Inscripcion;
 use Femip\Entities\Femip\InscripcionEvento;
+use Femip\Entities\Femip\ReservaHotel;
 use Femip\Events\FormularioContacto;
 use Femip\Repositories\Admin\SliderRepo;
 use Femip\Repositories\Femip\NotaPrensaRepo;
@@ -267,6 +268,47 @@ class FrontendController extends Controller
         //GUARDAR EN BD
         $contMensaje = new InscripcionEvento($request->all());
         $contMensaje->evento_id = 2;
+        $contMensaje->save();
+
+        $mensaje = 'El envío de tus datos se ha realizado con éxito.';
+
+        return [
+            'message' => $mensaje
+        ];
+    }
+
+    /*
+     * RESERVA HOTEL
+     */
+    public function reservaHotelGet()
+    {
+        return view('frontend.reserva-hotel');
+    }
+
+    public function reservaHotelPost(Request $request)
+    {
+        //REGLAS
+        $rules = [
+            'nombres'  => 'required',
+            'apellidos' => 'required',
+            'direccion' => 'required',
+            'email' => 'required|email',
+            'habitaciones' => 'required|numeric'
+        ];
+
+        //VALIDACION
+        $this->validate($request, $rules);
+
+//        //VALIDACION DE CAPTCHA
+//        if($this->captchaCheck() == false)
+//        {
+//            return redirect()->back()
+//                ->withErrors(['Error de captcha'])
+//                ->withInput();
+//        }
+
+        //GUARDAR EN BD
+        $contMensaje = new ReservaHotel($request->all());
         $contMensaje->save();
 
         $mensaje = 'El envío de tus datos se ha realizado con éxito.';

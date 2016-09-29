@@ -18,6 +18,8 @@ Route::get('inscripcion', ['as' => 'inscripcion.get', 'uses' => 'FrontendControl
 Route::post('inscripcion', ['as' => 'inscripcion.post', 'uses' => 'FrontendController@inscripcionPost']);
 Route::get('inscripcion-evento', ['as' => 'inscripcion-evento.get', 'uses' => 'FrontendController@inscripcionEventoGet']);
 Route::post('inscripcion-evento', ['as' => 'inscripcion-evento.post', 'uses' => 'FrontendController@inscripcionEventoPost']);
+Route::get('reserva-hotel', ['as' => 'reserva-hotel.get', 'uses' => 'FrontendController@reservaHotelGet']);
+Route::post('reserva-hotel', ['as' => 'reserva-hotel.post', 'uses' => 'FrontendController@reservaHotelPost']);
 
 //CAMBIAR ANCHO Y ALTO DE IMAGEN
 Route::get('/upload/{folder}/{width}x{height}/{image}', ['as' => 'image.adaptiveResize', 'uses' => 'ImageController@adaptiveResize']);

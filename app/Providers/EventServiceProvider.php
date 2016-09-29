@@ -5,6 +5,7 @@ namespace Femip\Providers;
 use Femip\Events\FormularioContacto;
 use Femip\Events\FormularioInscripcion;
 use Femip\Events\FormularioInscripcionEvento;
+use Femip\Events\FormularioReservaHotel;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -24,6 +25,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         'Femip\Events\FormularioInscripcionEvento' => [
             'Femip\Listeners\EnvioMensajeInscripcionEvento'
+        ],
+        'Femip\Events\FormularioReservaHotel' => [
+            'Femip\Listeners\EnvioMensajeReservaHotel'
         ],
     ];
 
@@ -47,6 +51,10 @@ class EventServiceProvider extends ServiceProvider
 
         $events->listen('eloquent.created: Femip\Entities\Femip\InscripcionEvento', function ($model) {
             event(new FormularioInscripcionEvento($model));
+        });
+
+        $events->listen('eloquent.created: Femip\Entities\Femip\ReservaHotel', function ($model) {
+            event(new FormularioReservaHotel($model));
         });
     }
 }
