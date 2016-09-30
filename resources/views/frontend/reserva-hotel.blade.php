@@ -49,9 +49,9 @@
 
                     <div id="mensaje-enviado" style="display: none;height:400px;">
 
-                        <div class="block-header" style="padding-top: 0;">
+                        <div class="block-header" style="padding-top: 0;text-align: center;">
                             <h2>Los datos han sido enviados.</h2>
-                            <p class="lead">Muchas gracias por inscribirse.</p>
+                            <p class="lead">Muchas gracias por realizar su reservación.</p>
                         </div>
 
                     </div>
