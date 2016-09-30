@@ -41,19 +41,19 @@
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <td>Ceremonia de Inauguración</td>
+                                            <td align="left">Ceremonia de Inauguración</td>
                                             <td><strong>US$ 35.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td>02 almuerzos</td>
+                                            <td align="left">02 almuerzos</td>
                                             <td><strong>US$ 40.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td>Cena de Gala</td>
+                                            <td align="left">Cena de Gala</td>
                                             <td><strong>US$ 55.00</strong></td>
                                         </tr>
                                         <tr>
-                                            <td>Derecho de Inscripción</td>
+                                            <td align="left">Derecho de Inscripción</td>
                                             <td><strong>US$ 20.00</strong></td>
                                         </tr>
                                     </tbody>
