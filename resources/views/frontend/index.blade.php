@@ -59,18 +59,18 @@
         </div>
     </section>
 
-    <div class="modal fade" id="modal-popup" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" style="width: 780px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-                <div class="modal-body">
-                    <img src="/imagenes/navidad.jpg" alt="Feliz Navidad">
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<div class="modal fade" id="modal-popup" tabindex="-1" role="dialog" aria-hidden="true">--}}
+        {{--<div class="modal-dialog" style="width: 780px;">--}}
+            {{--<div class="modal-content">--}}
+                {{--<div class="modal-header">--}}
+                    {{--<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>--}}
+                {{--</div>--}}
+                {{--<div class="modal-body">--}}
+                    {{--<img src="/imagenes/navidad.jpg" alt="Feliz Navidad">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 @endsection
 
@@ -79,14 +79,14 @@
 
     {!! $slider->footer !!}
 
-    <script>
-        $('#modal-popup').on('shown.bs.modal', function () {
-            $("#txtname").focus();
-        });
+    {{--<script>--}}
+        {{--$('#modal-popup').on('shown.bs.modal', function () {--}}
+            {{--$("#txtname").focus();--}}
+        {{--});--}}
 
-        $('#modal-popup').modal({
-            show: true
-        });
-    </script>
+        {{--$('#modal-popup').modal({--}}
+            {{--show: true--}}
+        {{--});--}}
+    {{--</script>--}}
 
 @stop
